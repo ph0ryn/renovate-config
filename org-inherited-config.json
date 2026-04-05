@@ -6,6 +6,7 @@
   ],
   "automerge": true,
   "branchConcurrentLimit": 0,
+  "dependencyDashboard": false
   "lockFileMaintenance": {
     "enabled": true
   },
