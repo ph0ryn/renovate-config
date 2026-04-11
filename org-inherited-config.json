@@ -2,11 +2,11 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "schedule:weekly"
+    "schedule:weekly",
+    ":disableDependencyDashboard"
   ],
   "automerge": true,
   "branchConcurrentLimit": 0,
-  "dependencyDashboard": false,
   "lockFileMaintenance": {
     "enabled": true
   },
