@@ -2,7 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "schedule:weekly",
     ":disableDependencyDashboard"
   ],
   "automerge": true,
@@ -11,9 +10,19 @@
     "enabled": true
   },
   "minimumReleaseAge": "3 days",
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "automerge": true
+    }
+  ],
   "platformAutomerge": true,
   "postUpdateOptions": [
     "pnpmDedupe"
+  ],
+  "schedule": [
+    "* 0-3 * * 1"
   ],
   "vulnerabilityAlerts": {
     "labels": [
